@@ -1,0 +1,17 @@
+h1 {
+  padding: 10px;
+  background-color: #222;
+  color: white;
+}
+h2 {
+  color: pink;
+}
+h2,
+h3 {
+  text-align: center;
+}
+h2,
+h3,
+p {
+  background-color: lightblue;
+}
