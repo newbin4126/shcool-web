@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let name = prompt("이름을 입력하세요");
+      let jumsu = parseInt(prompt("점수를 입력하세요"));
+
+      if (!isNaN(jumsu)) {
+        if (jumsu >= 80) {
+          document.write(`<h2>합격</h2>`);
+          document.write(`<h4>${name}님 축하합니다. 점수 : ${jumsu}  점</h4>`);
+        } else {
+          document.write(`<h2>불합격</h2>`);
+          document.write(
+            `<h4> ${name}님 노력해 봅시다. 점수 : ${jumsu}  점</h4> `
+          );
+        }
+      } else {
+        alert("점수는 숫자를 입력하세요");
+      }
+    </script>
+  </body>
+</html>

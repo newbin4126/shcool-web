@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>등급판독기</title>
+  </head>
+  <body>
+    <script>
+      let jumsu = parseInt(prompt("점수는?"));
+
+      if (!isNaN(jumsu)) {
+        if (jumsu >= 90) {
+          document.write(`<h2>${jumsu}는 A등급입니다</h2>`);
+        } else if (jumsu >= 80) {
+          document.write(`<h2>${jumsu}는 B등급입니다</h2>`);
+        } else if (jumsu >= 70) {
+          document.write(`<h2>${jumsu}는 C등급입니다</h2>`);
+        } else if (jumsu >= 60) {
+          document.write(`<h2>${jumsu}는 D등급입니다</h2>`);
+        } else {
+          document.write(`F등급입니다</h2>`);
+        }
+      }
+    </script>
+  </body>
+</html>
