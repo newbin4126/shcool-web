@@ -25,13 +25,9 @@
       let end = Number(prompt("구구단의 끝 단 입력"));
 
       for (let i = start; i <= end; i++) {
-        document.write(`<div><h3>
-                ${i} 단
-              </h3>`);
+        document.write(`<div><h3> ${i} 단 </h3>`);
         for (let j = 1; j <= 9; j++) {
-          document.write(`<p>
-                ${i} X ${j} = ${start * j}
-              </p>`);
+          document.write(`<p> ${i} X ${j} = ${start * j} </p>`);
         }
         document.write(`<br></div>`);
       }
