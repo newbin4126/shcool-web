@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <caption>
+        <h2>JS 간단 계산기</h2>
+      </caption>
+      <tr>
+        <th>숫자 1</th>
+        <td><input type="text" id="num1" size="10" /></td>
+      </tr>
+      <tr>
+        <th>숫자 2</th>
+        <td><input type="text" id="num2" size="10" /></td>
+      </tr>
+      <tr>
+        <th colspan="2">
+          <input type="button" value="+" onclick="cal('+')" />
+          <input type="button" value="-" onclick="cal('-')" />
+          <input type="button" value="*" onclick="cal('*')" />
+          <input type="button" value="/" onclick="cal('/')" />
+        </th>
+      </tr>
+      <tr>
+        <th>계산결과</th>
+        <td><input type="text" id="result" size="10" /></td>
+      </tr>
+    </table>
+
+    <script>
+      function cal(op = "*") {
+        let n1 = parseInt(document.querySelector("#num1").value);
+        let n2 = parseInt(document.querySelector("#num2").value);
+
+        switch (op) {
+          case "+":
+            result = n1 + n2;
+            break;
+          case "-":
+            result = n1 - n2;
+            break;
+          case "*":
+            result = n1 * n2;
+            break;
+          case "/":
+            if (n2 !== 0) {
+              result = n1 / n2;
+            } else {
+              result = "0으로 나눌 수 없습니다.";
+            }
+            break;
+          default:
+            result = "잘못된 연산자";
+        }
+
+        parseInt((document.querySelector("#result").value = result));
+      }
+    </script>
+  </body>
+</html>
