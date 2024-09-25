@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>속성 이름을 이용한 속성값 변경</h1>
+    <a id="link" href="http://www.naver.com">네이버로 가기</a><br /><br />
+    <button onclick="changeLink()">구글로 가기</button>
+
+    <script>
+      function changeLink() {
+        let link = document.querySelector("#link");
+        link.textContent = "구글로 가기";
+        //link.href = "http://www.google.com";
+        link.setAttribute("href", "link");
+      }
+    </script>
+  </body>
+</html>
