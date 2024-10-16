@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="image/cup-1.png" id="c1" alt="컵" />
+    <script>
+      let cup = document.querySelector("#c1");
+      let isCup1 = true;
+
+      cup.addEventListener("click", () => {
+        if (isCup1) {
+          cup.src = "image/cup-2.png";
+        } else {
+          cup.src = "image/cup-1.png";
+        }
+        isCup1 = !isCup1;
+      });
+    </script>
+  </body>
+</html>
