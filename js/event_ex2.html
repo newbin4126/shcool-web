@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #big {
+        display: flex;
+      }
+      .big {
+        cursor: pointer;
+        margin: 5px;
+      }
+    </style>
   </head>
   <body>
     <div id="small">
@@ -20,5 +29,14 @@
         <img src="image/coffee-gray.jpg" class="big" />
       </div>
     </div>
+
+    <script>
+      const cup = document.querySelector("#cup");
+      document.querySelectorAll("#big .big").forEach((img) => {
+        img.addEventListener("click", () => {
+          cup.src = img.src; // 클릭한 이미지의 src로 변경
+        });
+      });
+    </script>
   </body>
 </html>
