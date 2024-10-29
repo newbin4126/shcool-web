@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="galleryZone">
+      <p><img src="../image/mov01.jpg" id="photo" alt=""</p>
+      <p>
+        <button onclick="gallery(0)">이전</button>
+        <button onclick="gallery(1)">다음</button>
+      </p>
+    </div>
+
+    <script>
+      let num = 1;
+
+      function gallery(dir) {
+        if (dir === 1) {
+          if (num === 8) {
+            alert("마지막입니다");
+            return;
+          }
+          num++;
+        } else {
+          if (num === 1) {
+            alert("처음입니다");
+            return;
+          }
+          num--;
+        }
+        let imgTag = document.querySelector("#photo");
+        imgTag.setAttribute("src", `../image/mov0${num}.jpg`);
+      }
+    </script>
+  </body>
+</html>
